@@ -1,0 +1,22 @@
+.buynow-heading{
+    color: white;
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.buynow-paragraph-container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+    padding: 0px 20px 0px;
+}
+
+.buynow-button{
+    padding: 5px 10px 5px;
+    border-radius: 14px;
+    height: 40px;
+    color: white;
+    background-color: rgb(11, 89, 89);
+    border: 1px solid rgb(4, 77, 77);
+}

@@ -1,8 +1,41 @@
 .nav-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    background-color: lightgray;
     height: 60px;
+}
+
+.nav-lists{
+    display: flex;
+    margin-right: auto;
+    width: 33%;
+}
+
+.nav-lists > p{
+    margin-left: 10px;
+}
+
+.logo-container{
+    width: 33%;
+    text-align: center;
+    
+}
+
+.logo-name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-optical-sizing: 10;
+}
+
+.nav-buttons-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 33%;
+}
+
+.nav-search{
+    padding: 7px 5px 7px;
+    border-radius: 10px;
 }
