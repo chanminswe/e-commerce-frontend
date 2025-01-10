@@ -8,7 +8,6 @@ function Navbar() {
       <div className="nav-lists">
         <p>Men</p>
         <p>Women</p>
-        <p>Kids</p>
       </div>
       <div className="logo-container">
         <h2 className="logo-name">Ionia</h2>

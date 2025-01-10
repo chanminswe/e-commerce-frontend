@@ -1,0 +1,40 @@
+.intro-accessory-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    
+}
+
+.intro-accessory-image{
+    width: 95%;
+    height: 70%;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.intro-accessory-container > h1 {
+    text-align: center;
+    margin: 5px 0px 0px;
+}
+
+.intro-accessory-container > p {
+    text-align: center;
+    color: gray;
+}
+
+.accessory-details-button{
+    margin: auto;
+    padding: 8px 15px 8px;
+    color: white;
+    background-color: black;
+    border-radius: 14px;
+    transition: transform 0.4s ease-in;
+}
+
+.accessory-details-button:hover{
+    transform: scale(1.05);
+}

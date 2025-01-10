@@ -4,39 +4,40 @@ import "./collection.css";
 function Collection() {
   const featuredItems = [
     {
-      itemName: "Running Shoes",
-      description: "Lightweight Running Shoes with Breathable Mesh",
-      price: "75",
+      id: 1,
+      title: "Mens Casual Slim Fit",
+      price: 15.99,
+      description: "",
+      category: "men's clothing",
+      image: "/images/products/uploaded/dummary_four.png",
       isFeatured: true,
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    },
-
-    {
-      itemName: "Running Shoes",
-      description: "Lightweight Running Shoes with Breathable Mesh",
-      price: "75",
-      isFeatured: true,
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
     },
     {
-      itemName: "Running Shoes",
-      description: "Lightweight Running Shoes with Breathable Mesh",
-      price: "75",
+      id: 2,
+      title: " Women Sweat Shirt",
+      price: 39.99,
+      description: "",
+      category: "women's clothing",
+      image: "/images/products/uploaded/dummy_one.png",
       isFeatured: true,
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
     },
     {
-      itemName: "Running Shoes",
-      description: "Lightweight Running Shoes with Breathable Mesh",
-      price: "75",
+      id: 3,
+      title: "DANVOUY Womens Hoodie",
+      price: 12.99,
+      description: "",
+      category: "women's clothing",
+      image: "/images/products/uploaded/dummy_two.png",
       isFeatured: true,
-      image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
     },
-    
+    {
+      id: 4,
+      title: "Men Neck T-shirt",
+      price: 33.99,
+      category: "men's clothing",
+      image: "/images/products/uploaded/neck_tshirt.png",
+      isFeatured: true,
+    },
   ];
 
   return (
@@ -49,10 +50,10 @@ function Collection() {
       <div className="featured-collection-container">
         {featuredItems.map((value, index) => (
           <div className="featured-item-container">
-            <img src={value.image} alt={value.itemName} />
-            <p className="featured-itemname">{value.itemName}</p>
-            <p className="featured-description">{value.description}</p>
+            <img src={value.image} alt={value.title} />
+            <p className="featured-itemname">{value.title}</p>
             <p className="featured-price">${value.price}</p>
+            <button className="featured-button">Add to cart</button>
           </div>
         ))}
       </div>
