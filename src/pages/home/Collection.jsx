@@ -23,6 +23,14 @@ function Collection() {
     },
     {
       id: 3,
+      title: "Men Neck T-shirt",
+      price: 33.99,
+      category: "men's clothing",
+      image: "/images/products/uploaded/neck_tshirt.png",
+      isFeatured: true,
+    },
+    {
+      id: 4,
       title: "DANVOUY Womens Hoodie",
       price: 12.99,
       description: "",
@@ -31,11 +39,19 @@ function Collection() {
       isFeatured: true,
     },
     {
-      id: 4,
-      title: "Men Neck T-shirt",
-      price: 33.99,
+      id: 5,
+      title: "Men Plain T-shirt",
+      price: 13.99,
       category: "men's clothing",
-      image: "/images/products/uploaded/neck_tshirt.png",
+      image: "/images/products/uploaded/white_tshirt.png",
+      isFeatured: true,
+    },
+    {
+      id: 6,
+      title: "Women Plain T-shirt",
+      price: 13.99,
+      category: "men's clothing",
+      image: "/images/products/ladies_tshirt.png",
       isFeatured: true,
     },
   ];
