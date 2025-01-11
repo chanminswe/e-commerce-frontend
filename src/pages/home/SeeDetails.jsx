@@ -12,6 +12,10 @@ function SeeDetails() {
         <h3 className="details-heading">Women</h3>
         <button className="details-button">See Details</button>
       </div>
+      <div className="details-for-kids">
+        <h3 className="details-heading">Kids</h3>
+        <button className="details-button">See Details</button>
+      </div>
     </div>
   );
 }

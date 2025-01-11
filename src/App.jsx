@@ -4,6 +4,7 @@ import BuyNow from "./pages/home/BuyNow";
 import Collection from "./pages/home/Collection";
 import IntroAccessory from "./pages/home/IntroAccessory";
 import SeeDetails from "./pages/home/SeeDetails";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Collection />
       <IntroAccessory />
       <SeeDetails />
+      <Footer />
     </>
   );
 }

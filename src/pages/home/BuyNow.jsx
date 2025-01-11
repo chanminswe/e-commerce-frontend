@@ -6,7 +6,7 @@ function BuyNow() {
     <div
       className="buynow-container"
       style={{
-        backgroundImage: "url('/images/buynow-man.jpg')",
+        backgroundImage: "url('public/images/buynow-man.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
