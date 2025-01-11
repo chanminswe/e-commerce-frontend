@@ -17,15 +17,20 @@ function Footer() {
         </div>
       </div>
       <div className="footer-information-container">
+        <div className="footer-products">
+          <h3>Products</h3>
+          <p>Man</p>
+          <p>Woman</p>
+          <p>Kids</p>
+        </div>
         <div className="footer-categories">
           <h3>Categories</h3>
           <p>Man</p>
           <p>Woman</p>
+          <p>Kids</p>
           <p>Accessories</p>
           <p>Featured</p>
-          <p>Upcoming Products</p>
         </div>
-
         <div className="footer-social-medias">
           <h3 style={{ width: "100%" }}>Our Social Medias</h3>
           <FaFacebook size={24} />

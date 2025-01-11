@@ -44,15 +44,15 @@
     padding-right: 40px;
 }
 
-.footer-categories{
-    display: flex;
-    flex-direction: column;
+.footer-products > p{
+    color: gray;
 }
 
 .footer-categories > p{
-    margin: 7px;
     color: gray;
 }
+
+
 
 .footer-social-medias{
     display: flex;
