@@ -8,12 +8,14 @@
 
 .nav-lists{
     display: flex;
-    margin-right: auto;
     width: 33%;
+    padding-left: 50px;
+    gap: 10px;
+
 }
 
 .nav-lists > p{
-    margin-left: 10px;
+    cursor: pointer;
 }
 
 .logo-container{

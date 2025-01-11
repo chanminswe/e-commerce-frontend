@@ -19,9 +19,9 @@ function Footer() {
       <div className="footer-information-container">
         <div className="footer-products">
           <h3>Products</h3>
-          <p>Man</p>
-          <p>Woman</p>
-          <p>Kids</p>
+          <p>t-shirt</p>
+          <p>hoodies</p>
+          <p>watches </p>
         </div>
         <div className="footer-categories">
           <h3>Categories</h3>
