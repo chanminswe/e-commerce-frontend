@@ -75,3 +75,13 @@
 .details-button:hover{
     transform: scale(1.05);
 }
+
+
+@media screen and (max-Width : 700px){
+    .see-details-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+}

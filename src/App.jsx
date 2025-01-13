@@ -6,21 +6,23 @@ import IntroAccessory from "./pages/home/IntroAccessory";
 import SeeDetails from "./pages/home/SeeDetails";
 import Footer from "./components/Footer";
 import { Provider } from "react-redux";
-import store from './redux/store';
+import store from "./redux/store";
+import Home from "./pages/home/Home";
+import ScreenContextProvider from "./context/ScreenContextProvider";
 
 function App() {
   return (
     <>
       <Provider store={store}>
-        <Navbar />
-        <BuyNow />
-        <Collection />
-        <IntroAccessory />
-        <SeeDetails />
-        <Footer />
+        <ScreenContextProvider >
+          <Navbar />
+          <Home />
+          <Footer />
+        </ScreenContextProvider>
       </Provider>
     </>
   );
 }
 
 export default App;
+

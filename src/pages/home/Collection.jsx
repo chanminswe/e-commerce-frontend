@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./collection.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import { ScreenContext } from "../../context/ScreenContextProvider";
 
 function Collection() {
   const dispatch = useDispatch();
@@ -70,10 +71,16 @@ function Collection() {
         Our latest collection, where classic and contemporary styles <br />{" "}
         converge in perfect harmony.
       </p>
+      <p style={{ color: "gray", textAlign: "center" }}>
+      </p>
       <div className="featured-collection-container">
         {featuredItems.map((value, index) => (
           <div className="featured-item-container">
-            <img src={value.image} alt={value.title} />
+            <img
+              onClick={() => console.log(value.title)}
+              src={value.image}
+              alt={value.title}
+            />
             <p className="featured-itemname">{value.title}</p>
             <p className="featured-price">${value.price}</p>
             <button

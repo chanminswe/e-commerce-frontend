@@ -67,3 +67,32 @@
     gap: 10px;
     margin-bottom: 30px;
 }
+
+
+@media screen and (max-width : 600px){
+    .footer-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-information-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .footer-products{
+        margin-left: 20px;
+    }
+
+    .footer-social-medias{
+        display: none;
+    }
+
+    /* .footer-categories, .footer-products ,.footer-social-medias{
+        width: 45%;
+    } */
+
+}

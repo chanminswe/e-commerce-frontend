@@ -12,6 +12,7 @@ function BuyNow() {
         backgroundRepeat: "no-repeat",
         height: "550px",
         width: "95vw",
+        minWidth: "380px",
         margin: "auto",
         borderRadius: "20px",
         display: "flex",
