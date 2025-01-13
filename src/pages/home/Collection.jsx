@@ -1,7 +1,11 @@
 import React from "react";
 import "./collection.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 
 function Collection() {
+  const dispatch = useDispatch();
+
   const featuredItems = [
     {
       id: 1,
@@ -25,6 +29,7 @@ function Collection() {
       id: 3,
       title: "Men Neck T-shirt",
       price: 33.99,
+      description: "",
       category: "men's clothing",
       image: "/images/products/uploaded/neck_tshirt.png",
       isFeatured: true,
@@ -42,6 +47,7 @@ function Collection() {
       id: 5,
       title: "Men Plain T-shirt",
       price: 13.99,
+      description: "",
       category: "men's clothing",
       image: "/images/products/uploaded/white_tshirt.png",
       isFeatured: true,
@@ -50,6 +56,7 @@ function Collection() {
       id: 6,
       title: "Women Plain T-shirt",
       price: 13.99,
+      description: "",
       category: "men's clothing",
       image: "/images/products/ladies_tshirt.png",
       isFeatured: true,
@@ -69,7 +76,21 @@ function Collection() {
             <img src={value.image} alt={value.title} />
             <p className="featured-itemname">{value.title}</p>
             <p className="featured-price">${value.price}</p>
-            <button className="featured-button">Add to cart</button>
+            <button
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    title: value.title,
+                    image: value.image,
+                    price: value.price,
+                    description: value.description,
+                  })
+                )
+              }
+              className="featured-button"
+            >
+              Add to cart
+            </button>
           </div>
         ))}
       </div>
