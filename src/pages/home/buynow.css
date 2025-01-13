@@ -1,3 +1,18 @@
+.buynow-container {
+    background-image: url('/images/buynow-man.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 95vw;
+    min-width: 380px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
 .buynow-heading{
     color: white;
     font-style: italic;
@@ -24,4 +39,19 @@
 
 .buynow-button:hover{
     transform: scale(1.1);
+}
+
+@media screen and (max-Width : 380px) {
+    .buynow-container{
+        height: 550px;
+        width: 80vw;
+        min-width: 300px;
+    }
+
+    .buynow-button{
+        width: 100%;
+        align-self: center;
+    }
+
+
 }

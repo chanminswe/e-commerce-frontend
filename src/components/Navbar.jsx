@@ -35,8 +35,8 @@ function Navbar() {
             className="dropdown-overlay-container"
           ></div>
           <div className="dropdown-modal-nav">
-            <div className="nav-children-heading">
-              <h3>Ionia</h3>
+            <div className="dropdown-nav-children">
+              <p>Ionia</p>
             </div>
             <div className="dropdown-nav-children">
               <p>Men</p>

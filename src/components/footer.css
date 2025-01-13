@@ -27,6 +27,8 @@
     padding: 10px 20px 10px;
     border-radius: 20px;
     margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-button-container > button{
@@ -90,9 +92,5 @@
     .footer-social-medias{
         display: none;
     }
-
-    /* .footer-categories, .footer-products ,.footer-social-medias{
-        width: 45%;
-    } */
 
 }

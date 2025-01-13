@@ -5,20 +5,6 @@ function BuyNow() {
   return (
     <div
       className="buynow-container"
-      style={{
-        backgroundImage: "url('/images/buynow-man.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "550px",
-        width: "95vw",
-        minWidth: "380px",
-        margin: "auto",
-        borderRadius: "20px",
-        display: "flex",
-        justifyContent: "flex-end",
-        flexDirection: "column",
-      }}
     >
       <h2 className="buynow-heading">Ionia Collection</h2>
       <div className="buynow-paragraph-container">
