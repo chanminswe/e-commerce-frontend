@@ -80,7 +80,7 @@
     .footer-information-container{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 10px;
         flex-wrap: wrap;
     }

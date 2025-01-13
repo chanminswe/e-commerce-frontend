@@ -56,8 +56,8 @@ function Navbar() {
       </div>
       {screenSize.screenWidth > 600 && (
         <div className="nav-buttons-container">
-          <FaSearch size={20} />
-          <FaShoppingBag size={20} />
+          <FaSearch className="nav-icons" size={20} />
+          <FaShoppingBag className="nav-icons" size={20} />
           <p
             style={{ marginRight: "20px", cursor: "pointer" }}
             onClick={() => setLoginmodal(true)}
@@ -66,6 +66,7 @@ function Navbar() {
           </p>
           {loginmodal && (
             <LoginModal
+            
               setLoginModal={setLoginmodal}
               setSignupModal={setSignupModal}
             />

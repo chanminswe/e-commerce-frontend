@@ -16,6 +16,11 @@
     cursor: pointer;
 }
 
+.nav-icons { 
+    cursor: pointer;
+    padding-right: 10px;
+}
+
 .logo-container{
     width: 33%;
     text-align: center;

@@ -44,13 +44,19 @@
 @media screen and (max-Width : 380px) {
     .buynow-container{
         height: 550px;
-        width: 80vw;
+        width: 95vw;
         min-width: 300px;
     }
 
     .buynow-button{
         width: 100%;
         align-self: center;
+    }
+
+
+    .buynow-paragraph-container > p{
+        font-size: 12px;
+
     }
 
 
