@@ -1,22 +1,23 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import BuyNow from "./pages/home/BuyNow";
-import Collection from "./pages/home/Collection";
-import IntroAccessory from "./pages/home/IntroAccessory";
-import SeeDetails from "./pages/home/SeeDetails";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Home from "./pages/home/Home";
 import ScreenContextProvider from "./context/ScreenContextProvider";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
     <>
       <Provider store={store}>
-        <ScreenContextProvider >
+        <ScreenContextProvider>
           <Navbar />
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
           <Footer />
         </ScreenContextProvider>
       </Provider>
@@ -25,4 +26,3 @@ function App() {
 }
 
 export default App;
-

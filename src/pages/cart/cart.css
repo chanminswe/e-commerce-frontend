@@ -1,0 +1,27 @@
+.cart-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90vw;
+    gap: 20px;
+}
+
+.cart-container > h2{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.cartItems{
+    width: 65%;
+    max-height: 800px;
+    min-height: 400px;
+    border: 1px solid black;
+}
+
+.cartTotal{
+    width: 30%;
+    max-height: 250px;
+    min-height: 200px;
+    border: 1px solid black;
+}
+

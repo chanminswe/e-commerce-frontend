@@ -3,6 +3,7 @@ import "./navbar.css";
 import { FaSearch, FaShoppingBag, FaBars } from "react-icons/fa";
 import LoginModal from "./LoginModal";
 import SignUp from "./SignUp";
+import { Link, useNavigate } from "react-router-dom";
 import { ScreenContext } from "../context/ScreenContextProvider";
 
 function Navbar() {
@@ -10,6 +11,7 @@ function Navbar() {
   const [signupModal, setSignupModal] = useState(false);
   const [isDropDown, setIsDropDown] = useState(false);
   const { screenSize } = useContext(ScreenContext);
+  const navigate = useNavigate();
 
   return (
     <nav className="nav-container">
@@ -57,7 +59,13 @@ function Navbar() {
       {screenSize.screenWidth > 600 && (
         <div className="nav-buttons-container">
           <FaSearch className="nav-icons" size={20} />
-          <FaShoppingBag className="nav-icons" size={20} />
+          <FaShoppingBag
+            className="nav-icons"
+            size={20}
+            onClick={() => {
+              navigate("/cart");
+            }}
+          />
           <p
             style={{ marginRight: "20px", cursor: "pointer" }}
             onClick={() => setLoginmodal(true)}
@@ -66,7 +74,6 @@ function Navbar() {
           </p>
           {loginmodal && (
             <LoginModal
-            
               setLoginModal={setLoginmodal}
               setSignupModal={setSignupModal}
             />
