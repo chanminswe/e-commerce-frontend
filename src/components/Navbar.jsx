@@ -54,14 +54,21 @@ function Navbar() {
       )}
 
       <div className="logo-container">
-        <h2 className="logo-name">Ionia</h2>
+        <h2
+          onClick={() => {
+            navigate("/");
+          }}
+          className="logo-name"
+        >
+          Ionia
+        </h2>
       </div>
       {screenSize.screenWidth > 600 && (
         <div className="nav-buttons-container">
-          <FaSearch className="nav-icons" size={20} />
+          <FaSearch className="nav-icons" size={28} />
           <FaShoppingBag
             className="nav-icons"
-            size={20}
+            size={28}
             onClick={() => {
               navigate("/cart");
             }}

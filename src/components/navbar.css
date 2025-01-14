@@ -29,6 +29,7 @@
 .logo-name{
     font-family: Arial, Helvetica, sans-serif;
     font-optical-sizing: 10;
+    cursor: pointer;
 }
 
 .nav-buttons-container{

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "./collection.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
-import { ScreenContext } from "../../context/ScreenContextProvider";
 
 function Collection() {
   const dispatch = useDispatch();
@@ -90,7 +89,7 @@ function Collection() {
                     title: value.title,
                     image: value.image,
                     price: value.price,
-                    description: value.description,
+                    quantity : value.quantity
                   })
                 )
               }

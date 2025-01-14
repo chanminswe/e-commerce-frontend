@@ -52,6 +52,7 @@
     padding: 7px 10px 7px;
     border: 1px solid rgb(207, 207, 204);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .featured-button:hover{
