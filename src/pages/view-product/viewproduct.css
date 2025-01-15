@@ -1,0 +1,26 @@
+.view-product-container{
+    display: flex;
+    justify-content: center;
+    width: 91vw;
+    gap: 10px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.product-image-container{
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.product-image-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-description-container{
+    width: 50%;
+    border: 1px solid black;
+}

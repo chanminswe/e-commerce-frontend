@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import "./collection.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Collection() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const featuredItems = [
     {
@@ -18,7 +21,7 @@ function Collection() {
     },
     {
       id: 2,
-      title: " Women Sweat Shirt",
+      title: "Women Sweat Shirt",
       price: 39.99,
       description: "",
       category: "women's clothing",
@@ -70,29 +73,31 @@ function Collection() {
         Our latest collection, where classic and contemporary styles <br />{" "}
         converge in perfect harmony.
       </p>
-      <p style={{ color: "gray", textAlign: "center" }}>
-      </p>
+      <p style={{ color: "gray", textAlign: "center" }}></p>
       <div className="featured-collection-container">
         {featuredItems.map((value, index) => (
           <div className="featured-item-container">
             <img
-              onClick={() => console.log(value.title)}
+              onClick={() =>
+                navigate(`/product/${encodeURIComponent(value.id)}`)
+              }
               src={value.image}
               alt={value.title}
             />
             <p className="featured-itemname">{value.title}</p>
             <p className="featured-price">${value.price}</p>
             <button
-              onClick={() =>
+              onClick={() => {
                 dispatch(
                   addToCart({
                     title: value.title,
                     image: value.image,
                     price: value.price,
-                    quantity : value.quantity
+                    quantity: 1,
                   })
-                )
-              }
+                );
+                toast.success("Item Added to cart!");
+              }}
               className="featured-button"
             >
               Add to cart
