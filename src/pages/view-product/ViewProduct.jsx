@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./viewproduct.css";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 
 function ViewProduct() {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const [selectedItem, setSelectedItem] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   const featuredItems = [
     {
@@ -77,6 +81,21 @@ function ViewProduct() {
 
     filterItem();
   }, [id]);
+
+  const handleAddToCart = () => {
+    if (selectedItem) {
+      dispatch(addToCart({ ...selectedItem, quantity }));
+    }
+  };
+
+  const handleQuantityChange = (actionType) => {
+    if (actionType === "increment") {
+      setQuantity((prev) => prev + 1);
+    } else if (actionType === "decrement" && quantity > 1) {
+      setQuantity((prev) => prev - 1);
+    }
+  };
+
   return (
     <>
       {selectedItem ? (
@@ -85,9 +104,29 @@ function ViewProduct() {
             <img src={selectedItem.image} alt={selectedItem.title} />
           </div>
           <div className="product-description-container">
-            <p>{selectedItem.category}</p>
-            <p>{selectedItem.title}</p>
-            <p>{selectedItem.description}</p>
+            <p style={{ fontSize: "20px" }}>{selectedItem.category}</p>
+            <p style={{ fontSize: "25px" }}>{selectedItem.title}</p>
+            <p style={{ fontSize: "15px" }}>{selectedItem.description}</p>
+            <div className="quantity-button-container">
+              <button
+                onClick={() => {
+                  handleQuantityChange("increment");
+                }}
+              >
+                +
+              </button>
+              <p>{quantity}</p>
+              <button
+                onClick={() => {
+                  handleQuantityChange("decrement");
+                }}
+              >
+                -
+              </button>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button onClick={handleAddToCart}>Add to cart</button>
+            </div>
           </div>
         </div>
       ) : (
