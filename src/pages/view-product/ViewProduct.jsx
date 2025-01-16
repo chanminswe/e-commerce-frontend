@@ -87,8 +87,7 @@ function ViewProduct() {
           <div className="product-description-container">
             <p>{selectedItem.category}</p>
             <p>{selectedItem.title}</p>
-            <p>{selectedItem.category}</p>
-            
+            <p>{selectedItem.description}</p>
           </div>
         </div>
       ) : (

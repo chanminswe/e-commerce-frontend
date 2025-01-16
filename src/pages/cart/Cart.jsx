@@ -52,7 +52,7 @@ function Cart() {
             responsiveLayout="stack"
             breakpoint="960px"
             value={cartItems}
-            tableStyle={{ minWidth: "60%" }}
+            className="cart-table" 
           >
             <Column field="title" header="Name"></Column>
             <Column header="Image" body={imageTemplate}></Column>
@@ -66,11 +66,11 @@ function Cart() {
           <div className="cart-button-container">
             <div className="subtotal-container">
               <p>Subtotal</p>
-              <p>${total}</p>
+              <p>${total.toFixed(1)}</p>
             </div>
             <div className="total-container">
               <p>Total</p>
-              <p>${total}</p>
+              <p>${total.toFixed(1)}</p>
             </div>
             <div className="total-button-container">
               <button>Order</button>
