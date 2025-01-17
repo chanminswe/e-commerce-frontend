@@ -104,7 +104,7 @@ function ViewProduct() {
             <img src={selectedItem.image} alt={selectedItem.title} />
           </div>
           <div className="product-description-container">
-            <p style={{ fontSize: "20px" }}>{selectedItem.category}</p>
+            <p style={{ fontSize: "20px" , color : 'gray'}}>{selectedItem.category}</p>
             <p style={{ fontSize: "25px" }}>{selectedItem.title}</p>
             <p style={{ fontSize: "15px" }}>{selectedItem.description}</p>
             <div className="quantity-button-container">

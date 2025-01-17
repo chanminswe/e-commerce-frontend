@@ -79,9 +79,8 @@ function Collection() {
     });
   };
 
-  // Add to cart handler
   const handleAddToCart = (item) => {
-    const quantity = quantities[item.id] || 1; // Default to 1 if no quantity is set
+    const quantity = quantities[item.id] || 1; 
     dispatch(addToCart({ ...item, quantity }));
     toast.success(`${item.title} added to cart!`);
   };

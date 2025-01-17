@@ -8,8 +8,8 @@ import Home from "./pages/home/Home";
 import ScreenContextProvider from "./context/ScreenContextProvider";
 import Cart from "./pages/cart/Cart";
 import ViewProduct from "./pages/view-product/ViewProduct";
-import { ToastContainer} from 'react-toastify';
-
+import { ToastContainer } from "react-toastify";
+import FilterPage from "./pages/view-product/FilterPage";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<ViewProduct />} />
+            <Route path="/products/:category" element={<FilterPage />} />
           </Routes>
           <Footer />
         </ScreenContextProvider>
