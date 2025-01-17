@@ -27,19 +27,27 @@ function Navbar() {
       {/*For Reponsive Nav Bar*/}
       {screenSize.screenWidth > 600 && (
         <div className="nav-lists">
-          <p onClick={() => navigate(`/products/${encodeURI("clothing")}`)}>
+          <p onClick={() => navigate(`/products/${encodeURIComponent("clothing")}`)}>
             All Clothing
           </p>
 
-          <p onClick={() => navigate(`/products/${encodeURI("menclothing")}`)}>
+          <p
+            onClick={() => navigate(`/products/${encodeURIComponent("men")}`)}
+          >
             Men
           </p>
           <p
-            onClick={() => navigate(`/products/${encodeURI("womenclothing")}`)}
+            onClick={() =>
+              navigate(`/products/${encodeURIComponent("women")}`)
+            }
           >
             Women
           </p>
-          <p onClick={() => navigate(`/products/${encodeURI("kidsclothing")}`)}>
+          <p
+            onClick={() =>
+              navigate(`/products/${encodeURIComponent("kids")}`)
+            }
+          >
             Kids
           </p>
         </div>
