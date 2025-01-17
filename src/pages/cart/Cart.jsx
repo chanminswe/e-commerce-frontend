@@ -52,7 +52,8 @@ function Cart() {
             responsiveLayout="stack"
             breakpoint="960px"
             value={cartItems}
-            className="cart-table" 
+            className="cart-table"
+            style={{ position: "relative", zIndex: 10 }}
           >
             <Column field="title" header="Name"></Column>
             <Column header="Image" body={imageTemplate}></Column>

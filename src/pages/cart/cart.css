@@ -1,11 +1,11 @@
 
-
 .cart-container{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     width: 90vw;
     gap: 20px;
+    z-index: 888;
 }
 
 .cart-container > h2{

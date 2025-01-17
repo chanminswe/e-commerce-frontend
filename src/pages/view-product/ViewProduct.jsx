@@ -123,9 +123,11 @@ function ViewProduct() {
               >
                 -
               </button>
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <button onClick={handleAddToCart}>Add to cart</button>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <button className="feature-button" onClick={handleAddToCart}>
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
         </div>

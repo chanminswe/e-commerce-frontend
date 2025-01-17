@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import "./collection.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 function Collection() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [quantities, setQuantities] = useState({});
 
   const featuredItems = [
     {
@@ -66,6 +67,25 @@ function Collection() {
     },
   ];
 
+  // Handle quantity changes for each product
+  const handleQuantityChange = (id, actionType) => {
+    setQuantities((prev) => {
+      const currentQuantity = prev[id] || 1;
+      const newQuantity =
+        actionType === "increment"
+          ? currentQuantity + 1
+          : Math.max(1, currentQuantity - 1);
+      return { ...prev, [id]: newQuantity };
+    });
+  };
+
+  // Add to cart handler
+  const handleAddToCart = (item) => {
+    const quantity = quantities[item.id] || 1; // Default to 1 if no quantity is set
+    dispatch(addToCart({ ...item, quantity }));
+    toast.success(`${item.title} added to cart!`);
+  };
+
   return (
     <>
       <h4 style={{ textAlign: "center", fontSize: "23px" }}>New Collection</h4>
@@ -73,35 +93,39 @@ function Collection() {
         Our latest collection, where classic and contemporary styles <br />{" "}
         converge in perfect harmony.
       </p>
-      <p style={{ color: "gray", textAlign: "center" }}></p>
       <div className="featured-collection-container">
-        {featuredItems.map((value, index) => (
-          <div className="featured-item-container">
+        {featuredItems.map((item) => (
+          <div className="featured-item-container" key={item.id}>
             <img
               onClick={() =>
-                navigate(`/product/${encodeURIComponent(value.id)}`)
+                navigate(`/product/${encodeURIComponent(item.id)}`)
               }
-              src={value.image}
-              alt={value.title}
+              src={item.image}
+              alt={item.title}
             />
-            <p className="featured-itemname">{value.title}</p>
-            <p className="featured-price">${value.price}</p>
-            <button
-              onClick={() => {
-                dispatch(
-                  addToCart({
-                    title: value.title,
-                    image: value.image,
-                    price: value.price,
-                    quantity: 1,
-                  })
-                );
-                toast.success("Item Added to cart!");
-              }}
-              className="featured-button"
-            >
-              Add to cart
-            </button>
+            <p className="featured-itemname">{item.title}</p>
+            <p className="featured-price">${item.price}</p>
+            <div className="quantity-button-container">
+              <button
+                onClick={() => handleQuantityChange(item.id, "decrement")}
+              >
+                -
+              </button>
+              <p>{quantities[item.id] || 1}</p>
+              <button
+                onClick={() => handleQuantityChange(item.id, "increment")}
+              >
+                +
+              </button>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button
+                className="featured-button"
+                onClick={() => handleAddToCart(item)}
+              >
+                Add to cart
+              </button>
+            </div>
           </div>
         ))}
       </div>

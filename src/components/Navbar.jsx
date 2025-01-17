@@ -1,6 +1,15 @@
 import React, { useContext, useState } from "react";
 import "./navbar.css";
-import { FaSearch, FaShoppingBag, FaBars } from "react-icons/fa";
+import {
+  FaSearch,
+  FaShoppingBag,
+  FaBars,
+  FaMale,
+  FaFemale,
+  FaChild,
+  FaShoppingCart,
+  FaHouseUser,
+} from "react-icons/fa";
 import LoginModal from "./LoginModal";
 import SignUp from "./SignUp";
 import { Link, useNavigate } from "react-router-dom";
@@ -37,17 +46,35 @@ function Navbar() {
             className="dropdown-overlay-container"
           ></div>
           <div className="dropdown-modal-nav">
-            <div className="dropdown-nav-children">
+            <div
+              onClick={() => navigate("/")}
+              className="dropdown-nav-children dropdown-header"
+            >
               <p>Ionia</p>
+
+              <FaHouseUser size={20} />
             </div>
             <div className="dropdown-nav-children">
               <p>Men</p>
+              <FaMale size={20} />
             </div>
             <div className="dropdown-nav-children">
               <p>Women</p>
+
+              <FaFemale size={20} />
             </div>
             <div className="dropdown-nav-children">
               <p>Kids</p>
+
+              <FaChild size={20} />
+            </div>
+            <div
+              onClick={() => navigate("/cart")}
+              className="dropdown-nav-children"
+            >
+              <p>Cart</p>
+
+              <FaShoppingCart size={20} />
             </div>
           </div>
         </div>
