@@ -7,6 +7,8 @@ import featuredItems from "../../assets/featuredItems";
 
 function ViewProduct() {
   const { id } = useParams();
+  //Objectid : 67dlajfdkal201dld
+
   const dispatch = useDispatch();
   const [selectedItem, setSelectedItem] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -81,3 +83,36 @@ function ViewProduct() {
 }
 
 export default ViewProduct;
+
+/*
+
+api 
+node.js
+
+
+const Items = require('../../items);
+
+const getItem = async (req , res) => {
+  const {id} = req.body;
+
+  if(!id){
+  return res.status(400).json({message : "Cannot Get Id"}
+  )}
+
+  const findItem = await Items.findById({id});
+
+  if(!findItem){
+    return res.status(400).json({message : "Cannot Get Id"}
+  }
+
+  return res.status(200).json({message : "Item found sucessfully! " , findItem})
+
+}
+
+
+
+
+
+
+router.post('/getItem' , getItem)
+*/
